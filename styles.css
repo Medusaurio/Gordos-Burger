@@ -15,16 +15,16 @@ body {
 /* Header con Flexbox */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  position: fixed;  /*Para que el nav no se me mueva*/
+  justify-content: space-between;
+  background: rgb(230, 120, 50);
+  color: aliceblue;
+  padding: 10px 20px;
   width: 100%;
   height: 80px;
-  background: rgb(230, 120, 50);
-  color: #fff;
-  padding: 10px 20px;
-  border-bottom: solid black;
+  border-bottom: solid rgba(0, 0, 0, 0.8);
   border-width: 1.5px;
+  position: fixed;  /*Para que el nav no se me mueva*/
 }
 
 .luckiest-guy-regular {
@@ -38,13 +38,13 @@ header {
   -webkit-text-fill-color: #fff;
 }
 
-.inicio1, .menu2, .contacto3 {
+li {
   font-size: 20px;
   font-weight: bold;
   display: inline-block;
-  background: #ec3d4b;
+  background: rgb(175, 70, 50);
   color: #fff;
-  padding: 2px 4px;
+  padding: 1px 3px;
   border-radius: 15px;
   text-decoration: none;
   transition: 0.3s;
@@ -57,46 +57,51 @@ nav ul {
 }
 
 nav a {
-  -webkit-text-stroke: 0.7px #000;
+  -webkit-text-stroke: 1px #000;
   -webkit-text-fill-color: #fff;
   text-decoration: none;
 
 }
 
 li:hover {
-  background: #d62839;
+  background: rgb(195, 97, 77);
+}
+
+.banner {
+  background-image: url(/imagenes/banner-hamburguesa.jpg);
+  background-size: contain;
+  background-position: center;
+  height: 250px;
 }
 
 
-/* Hero */
-.hero {
-  color: #fff;
-  text-align: center;
+.section1{
   display: flex;
   justify-content: center;
-  align-items: center;
+  text-align: center;
+  color: #fff;
   min-height: 60px;
-  padding: 50px;
+  padding: 40px;
 }
 
-.hero-content {
+.section1-coment {
   background: rgba(0, 0, 0, 0.5);
-  padding: 35px;
+  padding: 60px;
   border-radius: 10px;
   margin: 50px;
 }
 
-.hero h2 {
-  padding-top: 60px;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.hero p {
+.section1 h2 {
+  padding-top: 20px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
-.btn {
+.section1 p {
+  margin-bottom: 30px;
+}
+
+.section1-btn {
   display: inline-block;
   background: #e63946;
   color: #fff;
@@ -105,19 +110,8 @@ li:hover {
   text-decoration: none;
 }
 
-.btn:hover {
+.section1-btn:hover {
   background: #d62839;
-}
-
-/* Menú con Grid */
-.menu {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.menu h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
 }
 
 .menu-grid {
@@ -125,13 +119,19 @@ li:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 38px;
 }
+/* .menu-grid{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+} */
 
 .menu-item {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #000000;
+  border: 3px solid #ddd;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .menu-item img {
@@ -140,12 +140,13 @@ li:hover {
 }
 
 .menu-item h3 {
+  color: #fff;
   margin: 15px 0 5px;
 }
 
 .menu-item p {
   font-size: 14px;
-  color: #555;
+  color: #ffffff;
   margin: 0 10px 10px;
 }
 
@@ -156,22 +157,42 @@ li:hover {
   color: #e63946;
 }
 
-/* Contacto */
+/* Footer */
 .contacto {
-  background: #f8f9fa;
+  background: #222;
+  color: #fff;
   padding: 40px 20px;
-  text-align: center;
+  text-align: left;
 }
 
 .contacto h2 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-/* Footer */
+.divisor {
+  width: 50%;             /* Ajustás el largo */
+  height: 2px;            /* Grosor de la línea */
+  background-color: #ccc; /* Color */
+  margin-bottom: 70px;      /* Centrada */
+  border-radius: 2px;     /* Opcional */
+}
+
 footer {
   background: #222;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 15px;
   font-size: 14px;
+}
+
+@media(max-width: 480px){
+  .luckiest-guy-regular{
+    font-size: 15px;
+  }
+  li{
+    font-size: 15px;
+  }
+  nav ul{
+    gap: 10px;
+  }
 }

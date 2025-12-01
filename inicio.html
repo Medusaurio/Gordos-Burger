@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gordos Burger</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="imagenes/icon2.png">
+  <link rel="icon" href="imagenes/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
@@ -15,25 +15,27 @@
     <h1 class="luckiest-guy-regular">Gordos Burger</h1>
     <img src="./imagenes/icon.png" alt="logo" width="60" height="60">
     <nav>
-      <ul>
-        <li class="inicio1"><a href="#inicio">Inicio</a></li>
-        <li class="menu2"><a href="menu.html">Menú</a></li>
-        <li class="contacto3"><a href="contacto.html">Contacto</a></li>
+      <ul class="">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="menu.html">Menú</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </nav>
   </header>
+<section class="banner">
 
-  <section id="inicio" class="hero">
-    <div class="hero-content">
+</section>
+  <main>
+  <section class="section1">
+    <div class="section1-coment">
       <h2>Las mejores hamburguesas de la ciudad</h2>
       <p>100% caseras, jugosas y llenas de sabor.</p>
-      <a href="#menu" class="btn">Ver menú</a>
+      <a href="#menu" class="section1-btn">Ver menú</a>
     </div>
   </section>
 
   <!-- Menú -->
-  <section id="menu" class="menu">
-    <h2>Nuestro Menú</h2>
+  <section class="menu">
     <div class="menu-grid">
       <div class="menu-item">
         <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
@@ -55,15 +57,23 @@
       </div>
     </div>
   </section>
+  </main>
 
-  <section id="contacto" class="contacto">
+  <section class="contacto">
     <h2>Contacto</h2>
-    <p>📍 Calle Falsa 123, Buenos Aires</p>
-    <p>📞 11 1234-5678</p>
-    <p>📧 gordosburger@email.com</p>
+    <p> Calle Falsa 123, Buenos Aires</p>
+    <p> 11 1234-5678</p>
+    <p> gordosburger@email.com</p>
+    <br>
+    <div class="divisor">
+    <br>
+    <p>Términos y condiciones</p>
+    <p>Política de Privacidad</p>
+    <p>Defensa de las y los consumidores</p>
+    </div>
   </section>
-
-  <footer>
+    <footer>
+    <img src="./imagenes/icon.png" alt="logo" width="60" height="60">
     <p>&copy; 2025 Gordos Burger - Todos los derechos reservados</p>
   </footer>
 </body>
