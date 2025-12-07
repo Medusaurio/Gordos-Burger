@@ -25,6 +25,28 @@ header {
   border-bottom: solid rgba(0, 0, 0, 0.8);
   border-width: 1.5px;
   position: fixed;  /*Para que el nav no se me mueva*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.luckiest-guy-regular2 {
+  border-color: #000;
+  font-family: "Luckiest Guy", cursive;
+  font-size: 90px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 2;
+  -webkit-text-stroke: 1px #000;
+  -webkit-text-fill-color: #fff;
 }
 
 .luckiest-guy-regular {
@@ -37,6 +59,13 @@ header {
   -webkit-text-stroke: 1px #000;
   -webkit-text-fill-color: #fff;
 }
+
+.contenido-principal {
+  margin-top: 110px; /* ajustá este valor según la altura del header */
+  padding: 15px;
+  text-align: center;
+}
+
 
 li {
   font-size: 20px;
@@ -67,6 +96,26 @@ li:hover {
   background: rgb(195, 97, 77);
 }
 
+#btn-carrito {
+  background: rgb(255, 176, 102);
+  color: #3b2300;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  /* display: flex;
+  justify-content: end;
+  align-items: end; */
+}
+
+#btn-carrito:hover {
+  background: #ffb347;
+  transform: scale(1.05);
+}
+
+
 .banner {
   background-image: url(/imagenes/banner-hamburguesa.jpg);
   background-size: contain;
@@ -88,7 +137,7 @@ li:hover {
   background: rgba(0, 0, 0, 0.5);
   padding: 60px;
   border-radius: 10px;
-  margin: 50px;
+  margin: 60px;
 }
 
 .section1 h2 {
@@ -98,7 +147,8 @@ li:hover {
 }
 
 .section1 p {
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 50px;
 }
 
 .section1-btn {
@@ -110,6 +160,19 @@ li:hover {
   text-decoration: none;
 }
 
+.btn-agregar{
+  display: inline-block;
+  background: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.btn-agregar:hover {
+  background: #d62839;
+}
+
 .section1-btn:hover {
   background: #d62839;
 }
@@ -118,6 +181,12 @@ li:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 38px;
+}
+.menu2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 38px;
+  padding-top: 10px;
 }
 /* .menu-grid{
   display: flex;
@@ -131,11 +200,11 @@ li:hover {
   border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .menu-item img {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
@@ -145,7 +214,7 @@ li:hover {
 }
 
 .menu-item p {
-  font-size: 14px;
+  font-size: 25px;
   color: #ffffff;
   margin: 0 10px 10px;
 }
@@ -196,3 +265,188 @@ footer {
     gap: 10px;
   }
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal.oculto {
+  display: none;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 10px;
+}
+.cerrar {
+  float: right;
+  cursor: pointer;
+}
+
+/* footer */
+
+.contacto2 {
+  margin-top: 80px;
+  text-align: center;
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.diviso2 {
+  text-align: center;
+  width: 100%;             /* Ajustás el largo */
+  height: 2px;            /* Grosor de la línea */
+  background-color: #ccc; /* Color */
+  margin-bottom: 70px;      /* Centrada */
+  border-radius: 2px;     /* Opcional */
+}
+
+.nose {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.formulario-contacto {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff3e0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  margin-top: 100px;
+}
+
+.formulario-contacto h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario-contacto label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.formulario-contacto button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff8c42;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #e6762f;
+}
+
+.seccion-mapa {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff3e0;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.seccion-mapa h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.seccion-mapa p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mapa-container {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 */
+  border-radius: 12px;
+}
+
+.mapa-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.seccion-receta {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffe8cc; /* estilo naranja crema */
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.seccion-receta h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro-receta {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.pasos-receta {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.pasos-receta li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+

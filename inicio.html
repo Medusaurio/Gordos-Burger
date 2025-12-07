@@ -7,14 +7,21 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="imagenes/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <h1 class="luckiest-guy-regular">Gordos Burger</h1>
+    <div class="logo-container">
     <img src="./imagenes/icon.png" alt="logo" width="60" height="60">
+    </div>
     <nav>
+      <div class="acciones">
+      <button id="btn-carrito">
+        🛒 Carrito (<span id="cart-count">0</span>)
+      </button>
+    </div>
       <ul class="">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="menu.html">Menú</a></li>
@@ -23,14 +30,13 @@
     </nav>
   </header>
 <section class="banner">
-
 </section>
   <main>
   <section class="section1">
     <div class="section1-coment">
-      <h2>Las mejores hamburguesas de la ciudad</h2>
+      <h2>Las mejores hamburguesas de Pomancity</h2>
       <p>100% caseras, jugosas y llenas de sabor.</p>
-      <a href="#menu" class="section1-btn">Ver menú</a>
+      <a href="menu.html" class="section1-btn">Ver menú</a>
     </div>
   </section>
 
@@ -41,24 +47,69 @@
         <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
         <h3>Clásica</h3>
         <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$2500</span>
+        <span>$5000</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
       </div>
       <div class="menu-item">
         <img src="/imagenes/hamburguesa-doble.jpg" alt="Hamburguesa doble">
         <h3>Doble</h3>
         <p>Doble carne, doble queso, bacon y salsa especial.</p>
-        <span>$3500</span>
+        <span>$6000</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="6000">
+    Agregar al carrito
+  </button>
       </div>
       <div class="menu-item">
         <img src="/imagenes/hamburguesa-vegana.jpg" alt="Hamburguesa veggie">
         <h3>Veggie</h3>
         <p>Medallón de garbanzo, verduras frescas y palta.</p>
-        <span>$2800</span>
+        <span>$5500</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5500">
+    Agregar al carrito
+  </button>
       </div>
     </div>
   </section>
   </main>
 
+  <section class="seccion-receta">
+  <h2 class="luckiest-guy-regular">Cómo preparamos nuestras hamburguesas</h2>
+  <p class="intro-receta">
+    En Gordos Burger hacemos hamburguesas caseras, jugosas y llenas de sabor.<br>
+    Te mostramos paso a paso cómo es nuestra receta.
+  </p>
+
+  <ul class="pasos-receta">
+    <li>1. Seleccionamos la mejor carne para nuestras hamburguesas.</li>
+    <li>2. Formamos los medallones a mano para que queden perfectos.</li>
+    <li>3. Cocinamos a la plancha para sellar el sabor.</li>
+    <li>4. Armamos la burger con pan tostado, queso y nuestra salsa especial.</li>
+  </ul>
+
+  <!-- Video de YouTube -->
+  <div class="video-container">
+<div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/dNZgtGM9gIo"
+    title="Video de preparación"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+  </div>
+</section>
   <section class="contacto">
     <h2>Contacto</h2>
     <p> Calle Falsa 123, Buenos Aires</p>
@@ -76,5 +127,17 @@
     <img src="./imagenes/icon.png" alt="logo" width="60" height="60">
     <p>&copy; 2025 Gordos Burger - Todos los derechos reservados</p>
   </footer>
+  <div id="carrito-modal" class="modal oculto">
+  <div class="modal-contenido">
+    <span id="cerrar-carrito" class="cerrar">&times;</span>
+    <h2>Tu carrito</h2>
+    <div id="carrito-items"></div>
+    <p>Total: $<span id="carrito-total">0</span></p>
+    <button id="carrito-vaciar">Vaciar carrito</button>
+    <button id="carrito-confirmar">Confirmar pedido</button>
+  </div>
+</div>
+
+  <script src="./JS/index.js"></script>
 </body>
 </html>
