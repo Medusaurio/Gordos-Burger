@@ -1,4 +1,4 @@
-// ================== CARRITO ==================
+// CARRITO
 let carrito = [];
 
 
@@ -24,7 +24,7 @@ function guardarCarrito() {
     actualizarCartCount();
 }
 
-// Renderiza los items dentro del modal
+
 function renderCarrito() {
     carritoItems.innerHTML = "";
 
@@ -51,7 +51,7 @@ function renderCarrito() {
     carritoTotal.textContent = total;
 }
 
-// Agregar al carrito
+
 const botonesAgregar = document.querySelectorAll(".btn-agregar");
 
 botonesAgregar.forEach(boton => {
@@ -77,7 +77,7 @@ botonesAgregar.forEach(boton => {
     });
 });
 
-// Abrir/cerrar modal
+
 document.getElementById("btn-carrito").addEventListener("click", () => {
     renderCarrito();
     carritoModal.classList.remove("oculto");
@@ -87,14 +87,14 @@ document.getElementById("cerrar-carrito").addEventListener("click", () => {
     carritoModal.classList.add("oculto");
 });
 
-// Vaciar carrito
+
 document.getElementById("carrito-vaciar").addEventListener("click", () => {
     carrito = [];
     guardarCarrito();
     renderCarrito();
 });
 
-// Eliminar item individual (delegación de eventos)
+
 carritoItems.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn-eliminar-item")) {
     const index = e.target.dataset.index;
@@ -104,10 +104,10 @@ carritoItems.addEventListener("click", (e) => {
 }
 });
 
-// Confirmar pedido (por ahora solo un alert)
+
 document.getElementById("carrito-confirmar").addEventListener("click", () => {
     alert("Gracias por tu pedido!");
 });
 
-// Actualizar numerito al cargar
+
 actualizarCartCount();
