@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gordos Burger</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="icon" href="imagenes/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +38,19 @@
         <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
         <h3>Clásica</h3>
         <p>Pan, carne, queso, lechuga y tomate.</p>
+        <span>$4000
+        </span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/hamburguesa-doble.jpg" alt="Hamburguesa clásica">
+        <h3>Doble</h3>
+        <p>Pan, doble carne, queso y lechuga.</p>
         <span>$5000</span>
         <button class="btn-agregar"
           data-id="1"
@@ -47,9 +60,21 @@
   </button>
       </div>
       <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
+        <img src="./imagenes/hamburguesa-vegana.jpg" alt="Hamburguesa clásica">
+        <h3>Vegana</h3>
+        <p>Pan, hamburguesa vegana, tomate y lechuga.</p>
+        <span>$4500</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/burgues simple con papas.jpg" alt="Hamburguesa clásica">
+        <h3>Clásica + papas</h3>
+        <p>Pan, carne, queso, lechuga, tomate y papas</p>
         <span>$5000</span>
         <button class="btn-agregar"
           data-id="1"
@@ -59,9 +84,58 @@
   </button>
       </div>
       <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
+        <img src="./imagenes/bacon con papas y gaseosa.jpg" alt="Hamburguesa clásica">
+        <h3>Baccon</h3>
+        <p>Pan, carne, baccon, queso y papas.</p>
+        <span>$5500</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/hamburguesa doble con papas y gaseosa.jpg" alt="Hamburguesa clásica">
+        <h3>Clásica Doble</h3>
+        <p>Pan, doble carne, queso, lechuga y tomate + papas y gaseosa.</p>
+        <span>$6000</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/nuggets.jpg" alt="Hamburguesa clásica">
+        <h3>Nuggets</h3>
+        <p>10 nuggets</p>
+        <span>$3000
+        </span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/papasfritas.jpg" alt="Hamburguesa clásica">
+        <h3>Papas</h3>
+        <p>Porcion de papas</p>
+        <span>$3000</span>
+        <button class="btn-agregar"
+          data-id="1"
+          data-nombre="Gordo Doble Queso"
+          data-precio="5000">
+    Agregar al carrito
+  </button>
+      </div>
+      <div class="menu-item">
+        <img src="./imagenes/postre1.jpg" alt="Hamburguesa clásica">
+        <h3>Helado</h3>
+        <p>Helado Chocotorta</p>
         <span>$5000</span>
         <button class="btn-agregar"
           data-id="1"
@@ -71,9 +145,9 @@
   </button>
       </div>
       <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
+        <img src="./imagenes/postre2.jpg" alt="Hamburguesa clásica">
+        <h3>Helado</h3>
+        <p>Helado Block</p>
         <span>$5000</span>
         <button class="btn-agregar"
           data-id="1"
@@ -83,9 +157,9 @@
   </button>
       </div>
       <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
+        <img src="./imagenes/postre3.jpg" alt="Hamburguesa clásica">
+        <h3>Helado</h3>
+        <p>Helado Rocklets Bon o Bon</p>
         <span>$5000</span>
         <button class="btn-agregar"
           data-id="1"
@@ -95,82 +169,10 @@
   </button>
       </div>
       <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
-        <button class="btn-agregar"
-          data-id="1"
-          data-nombre="Gordo Doble Queso"
-          data-precio="5000">
-    Agregar al carrito
-  </button>
-      </div>
-      <div class="menu-item">
-        <img src="/imagenes/hamburguesa-clasica.jpg" alt="Hamburguesa clásica">
-        <h3>Clásica</h3>
-        <p>Pan, carne, queso, lechuga y tomate.</p>
-        <span>$5000</span>
+        <img src="./imagenes/Picsart_25-04-14_19-03-06-416.png" alt="Hamburguesa clásica">
+        <h3>Muñeco</h3>
+        <p>Muñeco edicion limitada</p>
+        <span>$50.000</span>
         <button class="btn-agregar"
           data-id="1"
           data-nombre="Gordo Doble Queso"
@@ -179,6 +181,18 @@
   </button>
       </div>
     </div>
+<div id="carrito-modal" class="modal oculto">
+  <div class="modal-contenido">
+    <span id="cerrar-carrito" class="cerrar">&times;</span>
+    <h2>Tu carrito</h2>
+    <div id="carrito-items"></div>
+    <p>Total: $<span id="carrito-total">0</span></p>
+    <button id="carrito-vaciar">Vaciar carrito</button>
+    <button id="carrito-confirmar">Confirmar pedido</button>
+  </div>
+</div>
+
+  <script src="./JS/index.js"></script>
 </section>
 </main>
 </body>
